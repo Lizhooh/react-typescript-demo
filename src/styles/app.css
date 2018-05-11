@@ -1,0 +1,40 @@
+html, body {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #38f;
+}
+
+a:hover {
+    color: #444;
+}
+
+
+.main {
+    padding: 10px 8px;
+}
+
+.menu {
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    user-select: none;
+}
+
+.menu > a {
+    padding: 5px;
+    margin: 5px;
+}
+
+.body {
+     padding: 20px;
+     margin: 10px;
+     background-color: #f9f9f9;
+     text-align: center;
+}
+
