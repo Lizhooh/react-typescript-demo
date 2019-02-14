@@ -1,13 +1,15 @@
-import * as React from 'react';
-import * as actions from '../store/state/about';
+import React, { Component } from 'react';
+import * as actions from '../stores/state/about';
 import { connect } from 'react-redux';
 
-export interface Props {
-    state: actions.State,
-    [rest: string]: any;
+export interface IProps {
+    state: actions.IState,
 }
 
-class AboutView extends React.Component<Props, any> {
+export default connect(
+    state => ({ state: (state as any).about }),
+    actions
+)(class extends Component<IProps> {
     render() {
         return (
             <div>
@@ -15,9 +17,8 @@ class AboutView extends React.Component<Props, any> {
             </div>
         );
     }
-}
+});
 
-export default connect(
-    state => ({ state: (state as any).about }),
-    actions
-)(AboutView);
+
+
+

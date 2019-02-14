@@ -1,20 +1,19 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-interface Props {
-    list: Array<{
-        text: string,
-        url: string,
-    }>
-}
+interface IProps {
+    list: [any]
+};
 
-export default (p: Props) => (
+export default ({ list }: IProps) => (
     <div className="menu">
-        {p.list.map((item, index) => (
+        {list.map((item, index) => (
             <Link to={item.url} key={item.url}>
                 {item.text}
             </Link>
         ))}
     </div>
-)
+);
+
+
 

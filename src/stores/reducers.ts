@@ -1,11 +1,11 @@
 
-const INIT_STATE = {
-    name: 'text',
-}
+const initState = {
+    name: 'test',
+};
 
-export default (state = INIT_STATE) => {
+export default (state = initState) => {
     return state;
-}
+};
 
 export { default as user } from './state/user';
 export { default as home } from './state/home';
